@@ -30,7 +30,7 @@ jobs:
           terraform validate
 
 
-          - name: Apply ASG
+          - name: Apply asg
         working-directory: "terraform/asg"
         run: |
           terraform apply -auto-approve
