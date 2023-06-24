@@ -24,7 +24,7 @@ jobs:
         run: |
           terraform init  
 
-     - name: Validate rds
+      - name: Validate rds
         working-directory: "terraform/rds"
         run: |
           terraform validate
