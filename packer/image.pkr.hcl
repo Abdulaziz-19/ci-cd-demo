@@ -11,7 +11,6 @@ packer {
 
 source "amazon-ebs" "image" {
   ami_name             = "golden-image {{timestamp}}"
-  ssh_keypair_name     = "packer"
   instance_type        = "t2.micro"
   ssh_username         = "ec2-user"
   region               = "us-east-2"
