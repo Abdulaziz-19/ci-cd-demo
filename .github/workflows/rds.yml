@@ -1,9 +1,12 @@
-name: Deploy rds
+name: Deploy RDS
 
 on:
-  push:
-    branches: [ "master" ]
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["Deploy VPC"]
+    types:
+      - completed
+
+  workflow_dispatch:    
 
 jobs:
 

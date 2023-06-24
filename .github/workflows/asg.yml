@@ -1,9 +1,12 @@
-name: Deploy asg
+name: Deploy ASG
 
 on:
-  push:
-    branches: [ "master" ]
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["Deploy RDS"]
+    types:
+      - completed
+
+  workflow_dispatch:    
 
 jobs:
 

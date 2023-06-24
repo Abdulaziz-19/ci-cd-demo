@@ -1,9 +1,12 @@
 name: Deploy VPC
 
 on:
-  push:
-    branches: [ "master" ]
-  workflow_dispatch:
+  workflow_run:
+    workflows: ["packer"]
+    types:
+      - completed
+
+  workflow_dispatch:    
 
 jobs:
 
