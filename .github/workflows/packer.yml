@@ -24,8 +24,8 @@ jobs:
         run: |
           packer validate  .
           
-          # - name: Validate
-      #   working-directory: packer
-      #   run: |
-      #     packer build  .
+       - name: Validate
+         working-directory: packer
+         run: |
+           packer build  .
       
