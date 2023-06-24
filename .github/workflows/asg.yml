@@ -33,4 +33,4 @@ jobs:
       - name: Apply asg
         working-directory: "terraform/asg"
         run: |
-          terraform apply -auto-approve
+          terraform apply --auto-approve
