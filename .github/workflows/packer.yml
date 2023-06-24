@@ -17,21 +17,10 @@ jobs:
       - name: Initialize
         working-directory: packer
         run: |
-          packer init  
+          packer init  .
         
       - name: Validate
         working-directory: packer
         run: |
-          packer validate  
-
-  deploy:
-    runs-on: ubuntu-latest     # windows-latest   # mac-latest
-    
-    steps:
-      
-      - uses: actions/checkout@v3
-
-      - name: Initialize VPC
-        working-directory: terraform/vpc
-        run: |
-          terraform init  
+          packer validate  .
+          

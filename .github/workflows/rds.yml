@@ -1,4 +1,4 @@
-name: Deploy RDS
+name: Deploy rds
 
 on:
   workflow_run:

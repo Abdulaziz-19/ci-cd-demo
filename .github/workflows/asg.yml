@@ -1,4 +1,4 @@
-name: Deploy ASG
+name: Deploy asg
 
 on:
   workflow_run:
@@ -21,10 +21,10 @@ jobs:
 
       - name: Initialize asg
         working-directory: "terraform/asg"
-        run: |
+        run: 
           terraform init  
 
      - name: Validate asg
         working-directory: "terraform/asg"
-        run: |
+        run: 
           terraform validate

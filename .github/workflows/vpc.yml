@@ -1,4 +1,4 @@
-name: Deploy VPC
+name: Deploy vpc
 
 on:
   workflow_run:
