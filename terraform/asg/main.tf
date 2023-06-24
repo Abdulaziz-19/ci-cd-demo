@@ -1,8 +1,18 @@
 data "aws_ami" "ubuntu" {
   most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["golden-image*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
   owners = ["self"] 
 }
-
 module "asg" {
   source  = "terraform-aws-modules/autoscaling/aws"
   # Autoscaling group
