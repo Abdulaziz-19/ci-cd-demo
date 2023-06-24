@@ -2,7 +2,7 @@ name: Deploy rds
 
 on:
   workflow_run:
-    workflows: ["Deploy VPC"]
+    workflows: ["Deploy vpc"]
     types:
       - completed
 

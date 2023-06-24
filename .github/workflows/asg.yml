@@ -2,7 +2,7 @@ name: Deploy asg
 
 on:
   workflow_run:
-    workflows: ["Deploy RDS"]
+    workflows: ["Deploy rds"]
     types:
       - completed
 
