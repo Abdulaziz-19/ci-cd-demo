@@ -24,7 +24,7 @@ jobs:
         run: 
           terraform init  
 
-     - name: Validate asg
+      - name: Validate asg
         working-directory: "terraform/asg"
         run: 
           terraform validate
