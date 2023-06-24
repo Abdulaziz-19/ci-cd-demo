@@ -9,7 +9,6 @@ on:
   workflow_dispatch:    
 
 jobs:
-
   deploy:
     runs-on: ubuntu-latest     # windows-latest   # mac-latest
     env:
@@ -24,7 +23,7 @@ jobs:
         run: |
           terraform init  
 
-     - name: Validate VPC
+      - name: Validate VPC
         working-directory: "terraform/vpc"
         run: |
           terraform validate
