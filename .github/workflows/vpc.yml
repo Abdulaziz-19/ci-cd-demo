@@ -23,7 +23,14 @@ jobs:
         run: |
           terraform init  
 
+
       - name: Validate VPC
         working-directory: "terraform/vpc"
         run: |
           terraform validate
+
+      - name: Apply VPC
+        working-directory: "terraform/vpc"
+        run: |
+          terraform apply -auto-approve
+      

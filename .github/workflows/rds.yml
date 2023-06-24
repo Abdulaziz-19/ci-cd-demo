@@ -28,3 +28,9 @@ jobs:
         working-directory: "terraform/rds"
         run: |
           terraform validate
+
+
+         - name: Apply RDS
+        working-directory: "terraform/rds"
+        run: |
+          terraform apply -auto-approve
